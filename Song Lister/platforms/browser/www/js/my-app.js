@@ -23,6 +23,10 @@ $$(document).on('deviceready', function() {
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
 myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
+    $$('.something').on('click', function (e) {
+        $$(this).addClass('hello').attr('title','world').insertAfter('.something-else');
+        
+    })
 
 })
 
@@ -43,6 +47,3 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 
-$$('.something').on('click', function (e) {
-    $$(this).addClass('hello').attr('title','world').insertAfter('.something-else');
-})
