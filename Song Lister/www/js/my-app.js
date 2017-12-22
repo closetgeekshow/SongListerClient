@@ -30,6 +30,19 @@ myApp.onPageInit('about', function (page) {
 
 })
 
+myApp.onPageInit('login', function(page) {
+    // TODO: Insert login check/offline mode
+})
+
+myApp.onPageInit('news', function(page) {
+    // TODO: Starting News check, insert back remove close
+})
+
+myApp.onPageInit('mainmenu', function(page) {
+    // TODO: Starting News check, insert back remove close
+})
+
+
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {
     // Get page data from event data
