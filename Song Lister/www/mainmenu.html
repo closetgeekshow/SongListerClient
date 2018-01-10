@@ -3,22 +3,29 @@
 <!-- Top Navbar-->
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="center sliding">Songsmith Karaoke</div>      
+        <div class="center">Welcome {username}</div>
+        <div class="right">
+                <!--
+                  Right link contains only icon - additional "icon-only" class
+                  Additional "open-panel" class tells app to open panel when we click on this link
+                -->
+                <a href="#" class="link icon-only open-panel"><i class="f7-icons">mic</i></a>
+        </div>      
     </div>
 </div>
 <div class="pages">
     <div data-page="mainmenu" class="page no-toolbar">
         <div class="page-content">
             <div class="content-block mainmenu">
-                    <div class="content-block-title">Welcome {username}</div>
+                    
                     <div class="content-block">
                       <div class="row">
-                        <div class="col-50 center"><a href="songlist.html">
+                        <div class="col-50 center"><a href="my-songs.html">
                             <i class="f7-icons size-50">tune_fill</i>
                             <p></p>
                             My Songs</a>
                         </div>
-                        <div class="col-50 center"><a href="upnext.html">
+                        <div class="col-50 center"><a href="up-next.html">
                             <i class="f7-icons size-50">mic_fill</i><br />
                             <p></p>
                             Up Next</a>

@@ -25,7 +25,6 @@ myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
     $$('.something').on('click', function (e) {
         $$(this).addClass('hello').attr('title','world').insertAfter('.something-else');
-        
     })
 
 })
@@ -41,6 +40,32 @@ myApp.onPageInit('news', function(page) {
 myApp.onPageInit('mainmenu', function(page) {
     // TODO: Starting News check, insert back remove close
 })
+
+myApp.onPageInit('add-song', function(page) {
+    // TODO: Starting News check, insert back remove close
+    $$('.convert-form-to-data').on('click', function(){
+        var formData = myApp.form.convertToData('#add-song-form');
+        alert(JSON.stringify(formData));
+    });
+})
+
+myApp.onPageInit('profile', function(page) {
+    // TODO: Load profile data from localstorage
+    // IF Not load from server
+    // If Offline leave blank
+
+    // Check Update storage
+   // console.log('profile page loaded');
+    $$('#profile-form').on('form:storedata', function (e) {
+        console.log('data stored');
+        var formData = app.form.convertToData('#profile-form');
+        console.log('data: ' + JSON.stringify(formData));
+        alert('ding');
+    }); 
+})
+
+
+
 
 
 // Option 2. Using one 'pageInit' event handler for all pages:
@@ -59,4 +84,8 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
+
+
+
+
 
