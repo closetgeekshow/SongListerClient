@@ -44,8 +44,10 @@ myApp.onPageInit('mainmenu', function(page) {
 myApp.onPageInit('add-song', function(page) {
     // TODO: Starting News check, insert back remove close
     $$('.convert-form-to-data').on('click', function(){
+		alert('ding');
         var formData = myApp.form.convertToData('#add-song-form');
-        alert(JSON.stringify(formData));
+        alert(JSON.stringify(formData.name));
+		
     });
 })
 
@@ -58,7 +60,7 @@ myApp.onPageInit('profile', function(page) {
    // console.log('profile page loaded');
     $$('#profile-form').on('form:storedata', function (e) {
         console.log('data stored');
-        var formData = app.form.convertToData('#profile-form');
+        var formData = myApp.form.convertToData('#profile-form');
         console.log('data: ' + JSON.stringify(formData));
         alert('ding');
     }); 
@@ -85,6 +87,11 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 
+$$('.convert-form-to-data').on('click', function(){
+	    var formData = myApp.form.convertToData('#add-song-form');
+        alert(JSON.stringify(formData.name));
+		
+});
 
 
 
